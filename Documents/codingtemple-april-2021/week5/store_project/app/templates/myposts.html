@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/exterior-view-of-the-palace-theatre-at-the-opening-night-of-news-photo-1620139970.?crop=1xw:0.74963xh;center,top&resize=1200:*">
+<hr>
+
+{% for post in posts %}
+    <a href="{{ url_for('blog.post_detail', post_id=post.id) }}"><h3>{{ post.title }}</h3></a>
+    <p>{{ post.body }}</p>
+    <hr>
+{% endfor %}
+
+{% endblock content %}

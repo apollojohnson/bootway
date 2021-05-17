@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h4>Add a listing:</h4>
+
+<form action="" method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset>
+            {{ form.title.label }}
+            {{ form.title(class='form-control', placeholder='Title') }}
+        </fieldset>
+        <fieldset>
+            {{ form.body.label }}
+            {{ form.body(class='form-control', placeholder='Description') }}
+        </fieldset><p></p>
+        {{ form.submit(class='btn btn-primary') }}
+    </div>
+</form>
+
+{% endblock content %}
